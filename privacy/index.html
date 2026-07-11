@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wandelo Privacy Policy</title>
+<meta name="description" content="Wandelo's privacy policy: steps are the only health data we read. Never sold, never shared, never used for ads.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='46' fill='%23C9971C'/%3E%3Cpath d='M50 18 L61 50 L50 82 L39 50 Z' fill='%23FBFAF3'/%3E%3Cpath d='M50 18 L61 50 L39 50 Z' fill='%23213C27'/%3E%3C/svg%3E">
+<style>
+  :root{
+    --ink:#1C2B22; --paper:#F0F1E8; --card:#FBFAF3; --paper-deep:#DDDECF;
+    --pine:#2F5233; --pine-deep:#213C27; --moss-soft:#DCE8DA;
+    --gold:#C9971C; --gold-soft:#F0E2BC; --faint:#7A8578;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--paper);color:var(--ink);font-family:'Inter',-apple-system,sans-serif;line-height:1.65}
+  .mono{font-family:'IBM Plex Mono',monospace;text-transform:uppercase;letter-spacing:.14em;font-size:11px;font-weight:600}
+  header{background:var(--pine-deep)}
+  nav{max-width:720px;margin:0 auto;padding:18px 24px;display:flex;align-items:center;justify-content:space-between}
+  .wordmark{font-family:'Fraunces',serif;font-weight:700;font-size:22px;color:var(--card);text-decoration:none;display:flex;align-items:center;gap:10px}
+  nav a.plain{color:var(--gold-soft);text-decoration:none;font-size:14px;font-weight:500}
+  main{max-width:720px;margin:0 auto;padding:48px 24px 80px}
+  h1{font-family:'Fraunces',serif;color:var(--pine-deep);font-size:clamp(30px,5vw,40px);margin:8px 0 6px}
+  h2{font-family:'Fraunces',serif;color:var(--pine);font-size:22px;margin:36px 0 10px}
+  .meta{color:var(--faint);font-size:14px;font-style:italic}
+  p{margin:12px 0}
+  ul{margin:12px 0 12px 22px}
+  li{margin:8px 0}
+  .card{background:var(--card);border:1px solid var(--paper-deep);border-radius:16px;padding:18px 22px;margin:18px 0}
+  a{color:var(--pine)}
+  footer{background:var(--pine-deep);color:var(--moss-soft);padding:32px 24px;font-size:13px;text-align:center}
+  footer a{color:var(--gold-soft)}
+</style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a class="wordmark" href="/">
+      <svg width="28" height="28" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="46" fill="#C9971C"/><path d="M50 18 L61 50 L50 82 L39 50 Z" fill="#FBFAF3"/><path d="M50 18 L61 50 L39 50 Z" fill="#213C27"/></svg>
+      Wandelo
+    </a>
+    <a class="plain" href="/">Home</a>
+  </nav>
+</header>
+
+<main>
+  <span class="mono" style="color:var(--gold)">The plain-English version is the only version</span>
+  <h1>Wandelo Privacy Policy</h1>
+  <p class="meta">Effective: July 11, 2026 · Closed beta</p>
+
+  <p>Wandelo turns your daily steps into journeys, milestones, and real rewards. This policy explains exactly what we collect and what we never do with it.</p>
+
+  <h2>What we collect</h2>
+  <ul>
+    <li><strong>Step counts</strong> — read from Apple Health (HealthKit) or Health Connect with your explicit permission, or imported from Strava if you connect it. Steps are the only health data we read. We store daily totals, split into device-tracked and manually-entered counts.</li>
+    <li><strong>Account basics</strong> — your email address and sign-in identity (Apple, Google, or email), your chosen tier, and your timezone (so your week resets at <em>your</em> Monday midnight).</li>
+    <li><strong>App events</strong> — anonymous product analytics (screens viewed, features used) and crash reports. <strong>These never contain step counts, distances, journey progress, or any health-derived value.</strong> This exclusion is enforced in code by an allowlist and scrubber, not by policy alone.</li>
+  </ul>
+
+  <h2>What we never do</h2>
+  <div class="card">
+    <ul style="margin-left:18px">
+      <li>We never read your location. Your position on a journey map is computed from step counts alone.</li>
+      <li>We never sell your data, to anyone, for anything.</li>
+      <li>We never share your personal numbers with employers or sponsors. Workplace leagues see team percentages only.</li>
+      <li>Manually-entered steps never earn rewards — and are labeled honestly in the app.</li>
+    </ul>
+  </div>
+
+  <h2>What we share, and only with your consent</h2>
+  <p>When you claim a physical reward or a partner consultation, we share <strong>only your first name and email</strong> with that partner for fulfillment — and the app tells you this before every claim. Sponsored challenge prizes work the same way.</p>
+
+  <h2>Where your data lives</h2>
+  <p>Your data is stored with Supabase (hosted on AWS, US region), protected by row-level security: your rows are readable by you alone. Reward calculations run server-side and every balance movement is ledgered for auditability.</p>
+
+  <h2>Your controls</h2>
+  <ul>
+    <li>Revoke health access at any time in iOS Settings → Privacy &amp; Security → Health, or in the Health Connect app on Android.</li>
+    <li>Pause tracking any time with the in-app injury pause — paused weeks never count against you.</li>
+    <li>Request a full export or deletion of your data at any time by emailing us; deletion is complete and permanent.</li>
+  </ul>
+
+  <h2>Contact</h2>
+  <p>Questions or requests: <strong>privacy@wandelo.app</strong></p>
+  <p class="meta">During the closed beta this policy may be updated; material changes will be announced in the app.</p>
+</main>
+
+<footer>
+  © 2026 Wandelo · <a href="/">wandelo.app</a> · <a href="mailto:privacy@wandelo.app">privacy@wandelo.app</a>
+</footer>
+
+</body>
+</html>
