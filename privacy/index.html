@@ -57,7 +57,7 @@
   <h2>What we collect</h2>
   <ul>
     <li><strong>Step counts</strong> — read from Apple Health (HealthKit) or Health Connect with your explicit permission. Steps are the only health data we read. We store daily totals, split into device-tracked and manually-entered counts.</li>
-    <li><strong>Account basics</strong> — your email address and sign-in identity (Apple, Google, or email), your chosen tier, and your timezone (so your week resets at <em>your</em> Monday midnight).</li>
+    <li><strong>Account basics</strong> — your email address and sign-in identity (Apple, Google, or email), your username, your chosen tier, and your timezone (so your week resets at <em>your</em> Monday midnight).</li>
     <li><strong>App events</strong> — anonymous product analytics (screens viewed, features used) and crash reports. <strong>These never contain step counts, distances, journey progress, or any health-derived value.</strong> This exclusion is enforced in code by an allowlist and scrubber, not by policy alone.</li>
     <li><strong>A home region, only if you choose one</strong> — optional, and picked by you from a list of broad regions like “New England” or “Scotland.” We use it to suggest walks near you. It is never a street, a town, or a coordinate, it is never derived from your device, and you can change or clear it at any time in Profile → “Where you walk from.” Analytics record only <em>that</em> you set one, never which.</li>
   </ul>
@@ -67,7 +67,7 @@
     <ul style="margin-left:18px">
       <li>We never read your location. Not GPS, not Wi-Fi, not your IP address. Your position on a journey map is computed from step counts alone, and the home region above is only ever what you picked yourself.</li>
       <li>We never sell your data, to anyone, for anything.</li>
-      <li>We never share your personal numbers with employers or sponsors. Workplace leagues see team percentages only.</li>
+      <li>We never share your personal numbers with employers or sponsors. Workplace leagues see team percentages only, never one person's steps. Walkers you invite into a squad are a different matter, and “What other walkers can see” below says exactly what they see.</li>
       <li>Manually-entered steps never earn rewards — and are labeled honestly in the app.</li>
     </ul>
   </div>
@@ -76,6 +76,20 @@
   <p>Partner rewards are not currently offered. If we do offer them and you claim one, the partner receives <strong>only your first name and email</strong> — nothing else — and the app tells you so before every claim. We never ask for a delivery address, and there is nowhere in Wandelo to enter one.</p>
 
   <p>If you set a home region, it may be counted in <strong>anonymous regional totals</strong> — “1,400 walkers in the Pacific Northwest” — that we may one day show a tourism partner. Never your name, never your steps, never a total small enough to be about any one person: any figure describing fewer than 25 people is not reported at all. You can decline this and keep the local suggestions, with the toggle beside the region picker.</p>
+
+  <h2>What other walkers can see</h2>
+
+  <p>Wandelo has friends, squads and communities. Each one makes some of your walking visible to other people, and none of it is public: there is no Wandelo profile on the open web, and nothing below is visible to anyone who isn't signed in and connected to you in one of these three ways.</p>
+
+  <p><strong>Your name.</strong> You choose a username when you start, and that is how you appear everywhere below. Someone has to type it exactly to find you — there is no browsing of walkers, no “people you may know”, and no search by email. If you never set one, you appear as “A walker”.</p>
+
+  <p><strong>Friends</strong> see your profile: username, avatar, banner, title, streak, which journeys you've finished, your badges, and the gear you're wearing. They also see your achievements as they happen in their friend feed. A friend never sees your step count. You can switch the feed off with “Show my activity to friends” — that switch covers the friend feed and nothing else.</p>
+
+  <p><strong>Squads</strong> are up to ten walkers on a shared route, joined by invite code — nobody can find or join your squad without it. This is the one place in Wandelo where other people see your step counts: everyone in the squad sees everyone's steps for today, this month, and since they joined, beside their name. The squad's road is those steps added together, which is what a squad is for. If that's more than you want to share, leave the squad — nothing else in the app shows your steps to anyone.</p>
+
+  <p><strong>Communities</strong> are larger groups anyone signed in can browse and join, with no approval step. Joining means other members can see your achievements and your totals — journeys finished, exhibits, companions, flora, habitats — and you can see theirs. No step counts. Treat a community as a room with the door open.</p>
+
+  <p><strong>Blocking and muting.</strong> Blocking works both ways at once: neither of you can see the other's profile, feed entries or member row, and neither can send the other a friend request, postcard or wave. If you already share a squad, their name disappears from your board — but their steps keep counting toward the road, because that road belongs to the whole squad and not only to them. Muting is quieter: it keeps someone's updates out of your feeds without changing anything for them.</p>
 
   <h2>Where your data lives</h2>
   <p>Your data is stored with Supabase (hosted on AWS, US region), protected by row-level security: your rows are readable by you alone. Reward calculations run server-side and every balance movement is ledgered for auditability.</p>
