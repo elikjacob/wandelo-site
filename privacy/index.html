@@ -50,13 +50,13 @@
 <main>
   <span class="mono" style="color:var(--gold)">The plain-English version is the only version</span>
   <h1>Wandelo Privacy Policy</h1>
-  <p class="meta">Effective: July 11, 2026 · Closed beta</p>
+  <p class="meta">Effective: August 3, 2026 · Closed beta</p>
 
   <p>Wandelo turns your daily steps into journeys, milestones, and real rewards. This policy explains exactly what we collect and what we never do with it.</p>
 
   <h2>What we collect</h2>
   <ul>
-    <li><strong>Step counts</strong> — read from Apple Health (HealthKit) or Health Connect with your explicit permission, or imported from Strava if you connect it. Steps are the only health data we read. We store daily totals, split into device-tracked and manually-entered counts.</li>
+    <li><strong>Step counts</strong> — read from Apple Health (HealthKit) or Health Connect with your explicit permission. Steps are the only health data we read. We store daily totals, split into device-tracked and manually-entered counts.</li>
     <li><strong>Account basics</strong> — your email address and sign-in identity (Apple, Google, or email), your chosen tier, and your timezone (so your week resets at <em>your</em> Monday midnight).</li>
     <li><strong>App events</strong> — anonymous product analytics (screens viewed, features used) and crash reports. <strong>These never contain step counts, distances, journey progress, or any health-derived value.</strong> This exclusion is enforced in code by an allowlist and scrubber, not by policy alone.</li>
   </ul>
@@ -72,17 +72,26 @@
   </div>
 
   <h2>What we share, and only with your consent</h2>
-  <p>When you claim a physical reward or a partner consultation, we share <strong>only your first name and email</strong> with that partner for fulfillment — and the app tells you this before every claim. Sponsored challenge prizes work the same way.</p>
+  <p>When you claim a partner consultation, we share <strong>only your first name and email</strong> with that partner for fulfillment — and the app tells you this before every claim. If a prize is physical and needs shipping, we ask for a delivery address at claim time, pass it only to the shipping partner for that one delivery, and delete it once the prize is on its way. Sponsored challenge prizes work the same way.</p>
 
   <h2>Where your data lives</h2>
   <p>Your data is stored with Supabase (hosted on AWS, US region), protected by row-level security: your rows are readable by you alone. Reward calculations run server-side and every balance movement is ledgered for auditability.</p>
+
+  <h2>Service providers we use</h2>
+  <p>A small number of companies process data on our behalf to keep Wandelo running. Each one receives the minimum it needs to do its job, and none may use your data for anything else:</p>
+  <ul>
+    <li><strong>Supabase</strong> — our database and sign-in, hosted on AWS in the US. This is where everything described above lives.</li>
+    <li><strong>Sentry</strong> — crash reports, so we can fix bugs. Reports are scrubbed before they leave your device and never contain health data.</li>
+    <li><strong>PostHog</strong> (US) — product analytics. It receives only allowlisted events — never step counts or any health value — and we do no ad tracking of any kind.</li>
+    <li><strong>Expo</strong> — delivers our push notifications. It holds the device token needed to reach your phone, nothing more.</li>
+  </ul>
 
   <h2>Your controls</h2>
   <ul>
     <li>Revoke health access at any time in iOS Settings → Privacy &amp; Security → Health, or in the Health Connect app on Android.</li>
     <li>Pause tracking any time with the in-app injury pause — paused weeks never count against you.</li>
     <li>Delete your account and every trace of your data at any time, right in the app: Profile → “Delete my account.” Deletion is immediate, complete, and permanent.</li>
-    <li>Request a full export of your data at any time by emailing us.</li>
+    <li>Export a full copy of your data any time, right in the app: Profile → “Export my data.” Prefer email? Write to us and we’ll send it.</li>
   </ul>
 
   <h2>Contact</h2>
