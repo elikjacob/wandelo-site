@@ -59,12 +59,13 @@
     <li><strong>Step counts</strong> — read from Apple Health (HealthKit) or Health Connect with your explicit permission. Steps are the only health data we read. We store daily totals, split into device-tracked and manually-entered counts.</li>
     <li><strong>Account basics</strong> — your email address and sign-in identity (Apple, Google, or email), your chosen tier, and your timezone (so your week resets at <em>your</em> Monday midnight).</li>
     <li><strong>App events</strong> — anonymous product analytics (screens viewed, features used) and crash reports. <strong>These never contain step counts, distances, journey progress, or any health-derived value.</strong> This exclusion is enforced in code by an allowlist and scrubber, not by policy alone.</li>
+    <li><strong>A home region, only if you choose one</strong> — optional, and picked by you from a list of broad regions like “New England” or “Scotland.” We use it to suggest walks near you. It is never a street, a town, or a coordinate, it is never derived from your device, and you can change or clear it at any time in Profile → “Where you walk from.” Analytics record only <em>that</em> you set one, never which.</li>
   </ul>
 
   <h2>What we never do</h2>
   <div class="card">
     <ul style="margin-left:18px">
-      <li>We never read your location. Your position on a journey map is computed from step counts alone.</li>
+      <li>We never read your location. Not GPS, not Wi-Fi, not your IP address. Your position on a journey map is computed from step counts alone, and the home region above is only ever what you picked yourself.</li>
       <li>We never sell your data, to anyone, for anything.</li>
       <li>We never share your personal numbers with employers or sponsors. Workplace leagues see team percentages only.</li>
       <li>Manually-entered steps never earn rewards — and are labeled honestly in the app.</li>
@@ -72,7 +73,9 @@
   </div>
 
   <h2>What we share, and only with your consent</h2>
-  <p>When you claim a partner consultation, we share <strong>only your first name and email</strong> with that partner for fulfillment — and the app tells you this before every claim. If a prize is physical and needs shipping, we ask for a delivery address at claim time, pass it only to the shipping partner for that one delivery, and delete it once the prize is on its way. Sponsored challenge prizes work the same way.</p>
+  <p>Partner rewards are not currently offered. If we do offer them and you claim one, the partner receives <strong>only your first name and email</strong> — nothing else — and the app tells you so before every claim. We never ask for a delivery address, and there is nowhere in Wandelo to enter one.</p>
+
+  <p>If you set a home region, it may be counted in <strong>anonymous regional totals</strong> — “1,400 walkers in the Pacific Northwest” — that we may one day show a tourism partner. Never your name, never your steps, never a total small enough to be about any one person: any figure describing fewer than 25 people is not reported at all. You can decline this and keep the local suggestions, with the toggle beside the region picker.</p>
 
   <h2>Where your data lives</h2>
   <p>Your data is stored with Supabase (hosted on AWS, US region), protected by row-level security: your rows are readable by you alone. Reward calculations run server-side and every balance movement is ledgered for auditability.</p>
@@ -83,7 +86,8 @@
     <li><strong>Supabase</strong> — our database and sign-in, hosted on AWS in the US. This is where everything described above lives.</li>
     <li><strong>Sentry</strong> — crash reports, so we can fix bugs. Reports are scrubbed before they leave your device and never contain health data.</li>
     <li><strong>PostHog</strong> (US) — product analytics. It receives only allowlisted events — never step counts or any health value — and we do no ad tracking of any kind.</li>
-    <li><strong>Expo</strong> — delivers our push notifications. It holds the device token needed to reach your phone, nothing more.</li>
+    <li><strong>Expo</strong> — delivers our push notifications and our over-the-air app updates. It holds the device token needed to reach your phone, and its update service sees your device and app version each time the app checks for one.</li>
+    <li><strong>Apple</strong> and <strong>Google</strong> — only if you use “Continue with Apple” or “Continue with Google” to sign in. They confirm who you are and pass us your email; they receive nothing about your walking.</li>
   </ul>
 
   <h2>Your controls</h2>
